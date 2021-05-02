@@ -1,6 +1,6 @@
 #include <iostream>
-#include "Stack.h"
-#include "Node.h"
+#include "stack.h"
+#include "node.h"
 using namespace std;
 
 Stack::Stack(){ // Default constructor
@@ -86,8 +86,6 @@ void operator>>(Stack& inputStack, const Node* &holder){ // Pop
     inputStack.setHead(toPop->getNext());  
 
     holder = toPop;
-    cout << "POPPED2: " << &holder << " " << holder->getOperand() << holder->getOperator() << endl;
-    cout << &holder << endl;
 }
 
 ostream& operator<<(ostream& os, const Stack& inputStack){ // Display

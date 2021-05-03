@@ -1,8 +1,12 @@
+// Define files
 #ifndef STACK_H
 #define STACK_H
 
+// Preprocessor directives
 #include <iostream>
-#include "node.h"
+
+// Header files
+#include "Node.h"
 
 using namespace std;
 
@@ -10,10 +14,11 @@ class Stack{
     public:
         Stack(); // Default constructor
         Stack(Node* origin); // Overloaded constructor (node pointer parameter, assigns head to node passed in)
-        //Stack* operator=(const Stack* objToCopy); // Copy constructor
+
+        friend void deleteList(Node* origin); // Recursive destructor
         ~Stack(); // Destructor (deletes linked list)
 
-        Stack(Stack const &origObject);
+        Stack(Stack const &origObject); // Copy constructor
 
         Node* getHead() const; // Accessor
         void setHead(Node* newHead); // Mutator

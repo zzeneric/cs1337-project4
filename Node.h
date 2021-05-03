@@ -1,13 +1,14 @@
+// Define files
 #ifndef NODE_H
 #define NODE_H
 
+// Preprocessor directives
 #include <iostream>
-using namespace std;
 
 class Node{
     public:
-        Node();
-        Node(double operandTo, char operatorTo);
+        Node(); // Default constructor
+        Node(double operandTo, char operatorTo); // Overloaded constructor
 
         double getOperand() const; // Accessor
         char getOperator() const; // Accessor
@@ -17,9 +18,9 @@ class Node{
         void setOperator(char operatorTo); // Mutator
         void setNext(Node* nextTo); // Mutator
     private:
-        double operandValue;
-        char operatorValue;
-        Node* next;
+        double operandValue; // Operand value (#)
+        char operatorValue; // Operator value (+/-/*)
+        Node* next; // Next node for linked list
 };
 
 #endif

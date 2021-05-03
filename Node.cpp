@@ -1,8 +1,11 @@
-#include "node.h"
+// Preprocessor directives
 #include <iostream>
+
+// Header files
+#include "Node.h"
 using namespace std;
 
-Node::Node(){ // Default constructor
+Node::Node(){ // Default constructor, set to default values
     operandValue = 0;
     operatorValue = '0';
     next = nullptr;
